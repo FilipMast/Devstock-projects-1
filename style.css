@@ -23,6 +23,7 @@
   width: auto;
   height: 41px;
   margin-left: 16px;
+  cursor: pointer;
 }
 nav {
   display: flex;
@@ -54,6 +55,7 @@ nav ul {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  cursor: pointer;
 }
 .navButtons {
   display: flex;
@@ -63,23 +65,55 @@ nav ul {
   align-items: center;
   align-content: end;
   width: auto;
+  cursor: pointer;
 }
 
 /* ------------- Part 1 ------------ */
 .part1 {
   display: flex;
-  padding: 0 4%;
-  justify-content: space-between;
+  padding: 96px 0px;
+  align-items: center;
+  justify-content: center;
+  background: var(--gray-900, #111928);
 }
-.section1 {
-  position: relative;
-  width: 45%;
-  justify-items: flex-start;
-  padding-left: 15%;
-  font-family: "Inter";
+.part1-inside {
+  display: flex;
+  width: 1280px;
+  justify-content: space-between;
+  align-items: center;
+}
+.part1-leftSide {
+  display: flex;
+  width: 576px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+.part1-section2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+.video-camera {
+  background: transparent;
+}
+.part1-section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+.part1-rightSide-img {
+  display: flex;
+  width: 576px;
+  height: 360px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
 }
 h1 {
   font-size: 48px;
@@ -97,12 +131,14 @@ article {
   color: #9ca3af;
   font-family: "Inter";
 }
-.image {
-  position: relative;
-  padding-right: 15%;
-  justify-content: center;
+.part1-rightSide {
   display: flex;
+  width: 576px;
+  height: 360px;
+  /* padding: 330.629px 0px 17.371px 0px; */
+  justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 .camera {
   background-color: #9ca3af;
@@ -111,52 +147,35 @@ article {
   flex-shrink: 0;
 }
 .buttons {
-  margin: 32px 0 32px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 32px 0 32px 0;
   width: 100%;
   display: flex;
   font-family: "Inter";
   border-bottom: 1px solid #6b7280;
 }
 .blueButton {
-  background-color: #1a56db;
-  width: 124px;
-  height: 48px;
-  cursor: pointer;
   display: flex;
-  width: 182px;
-  padding: 12px 20px;
+  padding: 10px 20px;
+  justify-content: center;
   align-items: center;
   gap: 8px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%;
-  justify-content: center;
-  font-family: "Inter";
+  cursor: pointer;
   border-radius: 8px;
   background: var(--primary-700, #1a56db);
 }
 .greyButton {
-  background-color: #1a56db;
-  width: 124px;
-  height: 48px;
-  cursor: pointer;
   display: flex;
-  width: 182px;
-  padding: 12px 20px;
+  padding: 10px 20px;
+  justify-content: center;
   align-items: center;
   gap: 8px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 150%;
-  justify-content: center;
-  font-family: "Inter";
   border-radius: 8px;
   border: 1px solid var(--gray-600, #4b5563);
   background: var(--gray-800, #1f2a37);
-  margin-left: 16px;
-  margin-bottom: 32px;
+  cursor: pointer;
 }
 .sponsors {
   font-family: "Inter";
@@ -165,7 +184,7 @@ article {
   font-weight: 500;
   line-height: 150%;
   color: #6b7280;
-  margin-bottom: 12px;
+  margin: 32px 0 12px 0;
 }
 .logoSponsors {
   display: flex;
@@ -257,36 +276,37 @@ article {
 /* ------------- Part 3 ------------ */
 .part3 {
   display: flex;
-  padding: 0 4%;
-  justify-content: space-between;
-  margin-bottom: 64px;
-  margin: 0 13%;
-}
-.section2 {
-  position: relative;
-  /* width: 47%; */
-  justify-items: flex-end;
-  /* padding-right: 15%; */
-  font-family: "Inter";
-  margin-left: 80px;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.image2 {
-  display: block;
-  /* padding-left: 15%; */
-  height: 100%;
+.part3-inside {
+  display: flex;
+  width: 1280px;
+  align-items: center;
+  gap: 80px;
+}
+.part3-rightSide {
+  display: flex;
+  width: 640px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex-shrink: 0;
+}
+.part3-leftSide {
+  width: 540.458px;
+  height: 406.779px;
+  flex-shrink: 0;
 }
 .buttons2 {
-  width: 100%;
   display: flex;
-  font-family: "Inter";
-  position: relative;
+  align-items: flex-start;
+  gap: 16px;
+  background: transparent;
 }
 h2 {
   align-self: stretch;
-  font-family: Inter;
+  font-family: "Inter";
   font-size: 36px;
   font-style: normal;
   font-weight: 800;
@@ -308,9 +328,16 @@ h2 {
 /* ------------- Part 4 ------------ */
 .part4 {
   display: flex;
-  padding: 0 4%;
-  justify-content: space-between;
-  margin: 64px auto;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  padding: 64px 0;
+}
+.part4-inside {
+  display: flex;
+  width: 1280px;
+  align-items: center;
+  gap: 80px;
 }
 .blueButton2 {
   display: flex;
@@ -320,6 +347,7 @@ h2 {
   gap: 8px;
   border-radius: 8px;
   background: var(--primary-700, #1a56db);
+  cursor: pointer;
 }
 
 /* ------------- Part 6 ------------ */
@@ -387,6 +415,7 @@ h2 {
   font-weight: 500;
   line-height: 150%; /* 24px */
   background: transparent;
+  cursor: pointer;
 }
 .box-sponsors {
   display: flex;
@@ -412,6 +441,7 @@ h2 {
 }
 .visit {
   display: flex;
+  cursor: pointer;
   padding: 8px 12px;
   align-items: center;
   gap: 8px;
@@ -589,6 +619,7 @@ h2 {
 }
 .blueButton2 {
   display: flex;
+  cursor: pointer;
   padding: 10px 20px;
   justify-content: center;
   align-items: center;
@@ -598,6 +629,7 @@ h2 {
 }
 .greyButton2 {
   display: flex;
+  cursor: pointer;
   padding: 10px 20px;
   justify-content: center;
   align-items: center;
@@ -617,6 +649,7 @@ h2 {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 27px */
+  cursor: pointer;
 }
 .part8 {
   display: flex;
@@ -700,6 +733,7 @@ h2 {
 }
 .part8-link {
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   gap: 6px;
@@ -885,6 +919,7 @@ h4 {
 .column ul li {
   color: var(--gray-400, #9ca3af);
   font-family: "Inter";
+
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -896,6 +931,7 @@ h4 {
   width: 176px;
   background: var(--gray-800, #1f2a37);
 }
+
 .footer2-line2 {
   display: flex;
   align-items: center;
