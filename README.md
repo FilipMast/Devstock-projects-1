@@ -1,2 +1,2 @@
-# Devstock-projects-1
+# Devstock-projects
 Projects in Academy Devstock
