@@ -7,6 +7,12 @@
   background-color: #111928;
   color: white;
 }
+html {
+  max-width: 1920px;
+}
+body {
+  max-width: 100vw;
+}
 nav {
   display: flex;
   padding-top: 25px;
@@ -33,20 +39,15 @@ nav {
   flex: 1 0 0;
   background-color: #111928;
 }
-/* @media (min-width: 1024px) {
-  body {
-    padding: 24px 80px 96px;
-  }
-} */
-@media only screen and (min-width: 1024px) {
-  .nav-content {
-    display: flex;
-    min-width: 1280px;
-    justify-content: space-between;
-    align-items: center;
-    gap: 64px;
-  }
+
+.nav-content {
+  display: flex;
+  min-width: 68vw;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
 }
+
 .nav-buttons {
   display: flex;
   align-items: center;
@@ -65,14 +66,17 @@ nav {
 .nav-middle-content > div:hover {
   color: rgb(226, 156, 70);
   cursor: pointer;
+  transition: 0.5s;
 }
 .log-in:hover {
   color: rgb(226, 156, 70);
   cursor: pointer;
+  transition: 0.5s;
 }
 .logo:hover {
   cursor: pointer;
   text-transform: uppercase;
+  transition: 0.5s;
 }
 .logo {
   color: var(--white, #fff);
@@ -93,13 +97,14 @@ nav {
 }
 .part1-inside {
   display: flex;
-  width: 1280px;
+  width: 74%;
   justify-content: space-between;
   align-items: center;
+  gap: 80px;
 }
 .part1-leftSide {
   display: flex;
-  width: 576px;
+  width: 49%;
   flex-direction: column;
   align-items: flex-start;
   flex-shrink: 0;
@@ -124,8 +129,6 @@ nav {
 }
 .part1-rightSide-img {
   display: flex;
-  width: 576px;
-  height: 360px;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
@@ -144,6 +147,8 @@ nav {
 button:hover {
   color: rgb(226, 156, 70);
   position: relative;
+  transition: 0.5s;
+  border: 1px inset rgb(226, 156, 70);
 }
 
 h1 {
@@ -161,15 +166,6 @@ article {
   line-height: 150%;
   color: #9ca3af;
   font-family: "Inter";
-}
-.part1-rightSide {
-  display: flex;
-  width: 576px;
-  height: 360px;
-  /* padding: 330.629px 0px 17.371px 0px; */
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
 }
 .camera {
   background-color: #9ca3af;
@@ -230,9 +226,7 @@ article {
 .part2 {
   display: flex;
   justify-content: center;
-  /* width: 1440px; */
   padding-bottom: 0px;
-
   align-items: center;
   gap: 64px;
   padding-bottom: 96px;
@@ -240,15 +234,16 @@ article {
 .part2-1 {
   display: flex;
   justify-content: center;
-  width: 1280px;
+  width: 90%;
   align-items: center;
   gap: 48px;
 }
 .part2-2 {
   display: flex;
-  width: 1024px;
+  width: 65%;
   padding: 24px 16px;
   align-items: flex-start;
+  align-self: stretch;
   border-radius: 8px;
   border: 1px solid var(--gray-700, #374151);
   background: var(--gray-800, #1f2a37);
@@ -323,9 +318,10 @@ article {
 }
 .part3-inside {
   display: flex;
-  width: 1280px;
+  max-width: 1280px;
   align-items: center;
   gap: 80px;
+  justify-content: space-between;
   padding-bottom: 0;
 }
 .part3-rightSide {
@@ -337,8 +333,8 @@ article {
   flex-shrink: 0;
 }
 .part3-image {
-  width: 540.458px;
-  height: 406.779px;
+  display: block;
+  width: 45%;
   flex-shrink: 0;
 }
 .buttons2 {
@@ -996,9 +992,41 @@ h4 {
   line-height: 150%; /* 24px */
   align-self: stretch;
 }
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
   .nav-menu {
     width: auto;
     height: auto;
+  }
+} */
+
+/* ----------- media ----------- */
+
+@media (min-width: 1920px) {
+  .part1 {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .part1 {
+    padding: 96px 80px 96px 80px;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navbar-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1023px) {
+  .header-padding {
+    max-width: 480px;
+    margin: 0 auto;
   }
 }
